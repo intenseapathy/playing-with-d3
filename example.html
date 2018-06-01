@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Super cool example</title>
-    <script src"https://d3js.org/d3.v5.js"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
   </head>
   <body>
     <p>This is a paragraph</p>
@@ -10,13 +10,16 @@
     <p> This is the last paragraph </p>
     <h1> Pokemon </h1>
     <h2> Pikachu </h2>
-    <div style="background-color: green; width: 129px;"> attack 129; </div>
-    <div style="background-color: green; width: 129px;" attack 129;> defence: 190: </div>
+    <div style="background-color: green;"> attack 129 </div>
+    <div style="background-color: green;"> defence: 190 </div>
 
     <script type="application/javascript">
-    d3.selectAll("p").style("color", "white");
+      d3.selectAll("p").style("color", "blue");
 
-    d3.select("body").style("background-color", "black");
-</script>
+      var data = [129, 190, 250, 50];
+      d3.selectAll("div")
+        .data(data)
+          .style("width", (d) => d + "px");
+      </script>
   </body>
 </html>
